@@ -1,0 +1,33 @@
+﻿{% extends 'css3two_blog/blog_base.html' %}
+{% load static %}
+{% load markup %} <!-- markdown -->
+
+{% block content %}
+<!--
+  <img style="float: left; vertical-align: middle; margin: 0 10px 0 0;" src="{% static 'css3two_blog/images/home.png' %}" alt="home" /><h1 style="margin: 15px 0 0 0;">Welcome to the CSS3_two template</h1>
+  <p>This simple, fixed width website template is released under a <a href="http://creativecommons.org/licenses/by/3.0">Creative Commons Attribution 3.0 Licence</a>. This means you are free to download and use it for personal and commercial projects. However, you <strong>must leave the 'design from css3templates.co.uk' link in the footer of the template</strong>.</p>
+  <p>This template is written entirely in <strong>HTML5</strong> and <strong>CSS3</strong>.</p>
+  <p>You can view more free CSS3 web templates <a href="http://www.css3templates.co.uk">here</a>.</p>
+  <p>This template is a fully documented 5 page website, with an <a href="examples.html">examples</a> page that gives examples of all the styles available with this design. There is also a working PHP contact form on the contact page.</p>
+  <p></p>
+  <img style="float: left; vertical-align: middle; margin: 0 10px 0 0;" src="{% static 'css3two_blog/images/browser.png' %}" alt="browser" /><h1 style="margin: 15px 0 0 0;">Browser Compatibility</h1>
+  <p>This template has been tested in the following browsers:</p>
+  <ul>
+    <li>Internet Explorer 8</li>
+    <li>Internet Explorer 7</li>
+    <li>FireFox 10</li>
+    <li>Google Chrome 17</li>
+    <li>Safari 4</li>
+  </ul>
+-->
+
+{% for blogpost in blogposts %}
+  <link rel="stylesheet" type="text/css" href="{% static 'css3two_blog/css/friendly.css' %}" />
+  <div>
+    <h2><a href="{{ blogpost.get_absolute_url }}">{{ blogpost.title }}</a></h2>
+    <p>{{ blogpost.body|markdown:"codehilite"|truncatewords:'50' }}</p>
+    <p align="right"><a href="{{ blogpost.get_absolute_url }}">Continue Reading</a></p>
+  </div>
+{% endfor %}
+  
+{% endblock content %}

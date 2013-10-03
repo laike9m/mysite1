@@ -1,0 +1,13 @@
+{% extends 'css3two_blog/blog_base.html' %}
+{% load static %}
+{% load markup %} <!-- markdown -->
+
+{% block content %}
+
+  <link rel="stylesheet" type="text/css" href="{% static 'css3two_blog/css/friendly.css' %}" />
+  <div>
+    <h2><a href="{{ blogpost.get_absolute_url }}">{{ blogpost.title }}</a></h2>
+    <p>{{ blogpost.body|markdown:"codehilite" }}</p>
+  </div>
+  
+{% endblock content %}

@@ -6,10 +6,12 @@ import os
 # for slug, get_absolute_url
 from django.template.defaultfilters import slugify
 from django.core.urlresolvers import reverse
+from unidecode import unidecode
 
 # delete md_file before delete model
 from django.db.models.signals import pre_delete
 from django.dispatch import receiver
+
 
 def get_upload_file_name(instance, filename):
     year = date.today().year    # 按照年份存放
@@ -36,7 +38,7 @@ class BlogPost(models.Model):
             return 'no md_file'
     
     def save(self, *args, **kwargs):
-        self.slug = slugify(self.title)
+        self.slug = slugify(unidecode(self.title))
         if not self.body and self.md_file:
             self.body = self.md_file.read()
             self.md_file.close()

@@ -55,10 +55,57 @@
       <div id="sidebar_container">
         <img class="paperclip" src="{% static 'css3two_blog/images/paperclip.png' %}" alt="paperclip" />
         <div class="sidebar">
-          <h3>Latest News</h3>
-          <h4>New Website Launched</h4>
-          <h5>January 1st, 2012</h5>
-          <p>2012 sees the redesign of our website. Take a look around and let us know what you think.<br /><a href="#">Read more</a></p>
+        <!-- about me -->  
+          <!--<link rel="stylesheet" href="{% static 'css3two_blog/css/style_jd.css' %}" />-->
+          <div class="bio" data-twttr-id="twttr-sandbox-0">
+            <div class="illustration">
+              <img src="/static/css3two_blog/images/thumbnail.jpg" width=150px alt="laike9m">
+            </div>
+            <h2>Hi, I'm laike9m</h2>
+            <div class="clear"></div>
+            <p>
+              <strong>Free Software
+              <a href="http://en.wikipedia.org/wiki/Hacker_(programmer_subculture)">hacker</a></strong>,
+              <strong>developer</strong> and consultant working
+              <strong><a href="/">freelance</a></strong>.
+            </p>
+            <p>
+              <em>Project Technical Leader</em> for
+              <strong><a href="http://launchpad.net/ceilometer">OpenStack
+                Ceilometer</a></strong>, member of the
+                <strong><a href="http://openstack.org">OpenStack</a> technical
+                committee</strong>, and <strong>developer</strong>.
+            </p>
+            <p>
+              Also a <strong><a href="http://debian.org">Debian</a>
+              developer</strong>, the author of the
+              <strong><a href="http://awesome.naquadah.org">awesome window
+              manager</a></strong> and a developer of <strong>GNU
+              Emacs</strong>.
+            </p><hr>
+            <div id="social-logos">
+              <a href="/#contact">
+              <img src="/media/images/webicon-mail-m.png" alt="E-mail">
+              </a>
+              <a href="/blog/index.xml">
+              <img src="/media/images/webicon-rss-m.png" alt="RSS feed">
+              </a>
+              <a href="https://github.com/jd" title="jd on GitHub">
+              <img src="/media/images/webicon-github-m.png" alt="GitHub logo">
+              </a>
+              <a href="http://twitter.com/juldanjou" title="juldanjou on Twitter">
+              <img src="/media/images/webicon-twitter-m.png" alt="Twitter logo">
+              </a>
+              <a href="http://plus.google.com/108793797474967511035?prsrc=3" title="Julien Danjou on Google+">
+              <img src="/media/images/webicon-googleplus-m.png" alt="Google+ logo">
+              </a>
+              <a href="http://linkedin.com/in/juliendanjou" title="juliendanjou on LinkedIn">
+              <img src="/media/images/webicon-linkedin-m.png" alt="LinkedIn logo">
+              </a>
+            </div>
+          </div>
+          
+        <!-- about me -->   
         </div>
         <img class="paperclip" src="{% static 'css3two_blog/images/paperclip.png' %}" alt="paperclip" />
         <div class="sidebar">
@@ -81,11 +128,13 @@
           </ul>
         </div>
       </div>
+      
       <div class="content">
         {% block content %}
           Need to be filled by each page.     <!-- content should be written by myself  -->
         {% endblock content %}
       </div>
+      
     </div>
     <div id="scroll">
       <a title="Scroll to the top" class="top" href="#"><img src="{% static 'css3two_blog/images/top.png' %}" alt="top" /></a>

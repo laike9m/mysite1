@@ -199,7 +199,7 @@ nav {
 }
 
 #site_content { 
-  width: 1000px;
+  width: 1170px;
   overflow: hidden;
   margin: 0px auto 0 auto;
   padding: 15px 0 40px 0;
@@ -207,12 +207,12 @@ nav {
 
 #sidebar_container { 
   float: right;
-  width: 224px;
+  padding-right: 18px; 
+  width: 23.076923076923077%;
 }
 
 .sidebar { 
   float: right;
-  width: 200px;
   margin: 0 0 17px 0;
   background: #FFF;
   border: 1px solid #eee;
@@ -272,7 +272,7 @@ nav {
   margin: 0 0 15px 0;
   float: left;
   font-size: 120%;
-  padding: 15px 0 0 0;
+  padding: 15px 0 0 18px;
 }
   
 .content ul { 
@@ -543,3 +543,26 @@ ul#nav li a {
 ul#nav li a:hover,ul#nav li a:focus { 
   color:#09D4FF;
 }
+
+/* add from style_jd.css, make thumbnail from square to circle */
+.bio .illustration > img {
+    border-radius: 100px;
+    border: 0px #333333 solid;
+    max-width: 200px;
+    max-height: 200px;
+    vertical-align: middle;
+}
+
+.bio {
+    padding-left: 8px;
+}
+
+.bio .illustration {
+    width: 148px;
+    margin: auto;
+    margin-bottom: 15px;
+    margin-top: 15px;
+    margin-left: 15px;
+}
+
+
